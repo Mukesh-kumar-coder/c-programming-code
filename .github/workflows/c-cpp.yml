@@ -8,16 +8,21 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v4
-    - name: week1
+      with:
+        submodules: 'true'
+
+    - name: Configure
       run: ./week1
-    - name: make
+
+    - name: Make
       run: make
-    - name: make check
+
+    - name: Make Check
       run: make check
-    - name: make distcheck
+
+    - name: Make Distcheck
       run: make distcheck

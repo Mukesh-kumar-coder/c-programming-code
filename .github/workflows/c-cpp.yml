@@ -15,14 +15,9 @@ jobs:
       with:
         submodules: 'true'
 
-    - name: Configure
-      run: ./week1
-
-    - name: Make
-      run: make
-
-    - name: Make Check
-      run: make check
-
-    - name: Make Distcheck
-      run: make distcheck
+    - name: Build and Test in week1 directory
+      run: |
+        cd week1
+        make
+        make check
+        make distcheck

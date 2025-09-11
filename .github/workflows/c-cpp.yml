@@ -15,9 +15,10 @@ jobs:
       with:
         submodules: 'true'
 
-    - name: Build and Test in week1 directory
+    - name: Build and Test
       run: |
         cd week1
+        ./configure
         make
         make check
         make distcheck
